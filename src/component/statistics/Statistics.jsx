@@ -17,18 +17,22 @@ const Statistics = () => {
         <label className='statistics__label'>
           X axis labels:
           <input
+            placeholder='Enter: Label1, Label2, Label3'
             onChange={(event) => setLabels(event.target.value)}
             type='text'
             value={labels}
+            required
           />
         </label>
 
         <label className='statistics__label'>
           Y axis values:
           <input
+            placeholder='Enter: Value1, Value2, Value3'
             onChange={(event) => setValues(event.target.value)}
             type='text'
             value={values}
+            required
           />
         </label>
       </div>
