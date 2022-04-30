@@ -1,6 +1,6 @@
 # Your chart
 
-## [Site link](https://calendar-project21500.netlify.app/)
+## [Site link](https://vladimir21500.github.io/Your-chart-project/)
 
 ## Available Scripts
 
