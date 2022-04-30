@@ -32,7 +32,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - [Sass (Scss)](https://sass-lang.com/)
 - [BEM methodology](https://en.bem.info/methodology/)
 - [React](https://ru.reactjs.org/)
-- [Hooks](https://ru.reactjs.org/docs/hooks-intro.html) -[Chart.js](https://www.chartjs.org/)
+- [Hooks](https://ru.reactjs.org/docs/hooks-intro.html)
+- [Chart.js](https://www.chartjs.org/)
 
 ### Author
 
