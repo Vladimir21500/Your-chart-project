@@ -1,0 +1,101 @@
+@import '../../styles/variables.scss';
+@import '../../styles/breakpoints.scss';
+
+.statistics {
+  &__chart-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      text-align: center;
+      width: 100%;
+      margin: 20px;
+      font-weight: 700;
+    }
+
+    input {
+      display: block;
+      width: 80%;
+      margin: auto;
+      margin-top: 10px;
+      padding: 5px;
+      font-size: 24px;
+
+      @include for-small-up {
+        width: 60%;
+      }
+      @include for-medium-up {
+        width: 50%;
+      }
+    }
+  }
+
+  &__chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+
+    @include for-small-up {
+      width: 90%;
+    }
+    @include for-medium-up {
+      width: 65%;
+    }
+    @include for-large-up {
+      width: 40%;
+    }
+  }
+
+  &__types {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+
+    &-column {
+      display: flex;
+      flex-direction: column;
+
+      & label {
+        margin: 10px;
+        padding: 2px 9px;
+        line-height: 60px;
+        cursor: pointer;
+        border: 1px solid #dad0ff;
+
+        &:hover {
+          background-color: $backgroundColorBlue;
+          border: 1px solid $borderColorBlue;
+        }
+      }
+
+      & input {
+        display: none;
+
+        &:checked + label {
+          background-color: $backgroundColorBlue;
+          border: 3px solid $borderColorBlue;
+        }
+      }
+    }
+
+    @include for-small-up {
+      justify-content: center;
+
+      &-column {
+        flex-direction: row;
+
+        label {
+          line-height: 30px;
+        }
+      }
+    }
+
+    @include for-medium-up {
+      justify-content: center;
+    }
+  }
+}
