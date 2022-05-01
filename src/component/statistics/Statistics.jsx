@@ -6,8 +6,25 @@ const Statistics = () => {
   const [labels, setLabels] = useState('');
   const [values, setValues] = useState('');
   const [typeChart, setTypeChart] = useState('bar');
+  const [isEmptyLabels, setIsEmptyLabels] = useState(false);
+  const [isEmptyValues, setIsEmptyValues] = useState(false);
+
+  const onChangeLabels = (event) => {
+    setLabels(event.target.value);
+    setIsEmptyLabels(event.target.value === '');
+  };
+
+  const onChangeValues = (event) => {
+    setValues(event.target.value);
+    setIsEmptyValues(event.target.value === '');
+  };
 
   const onToggleType = (event) => {
+    setIsEmptyLabels(labels === '');
+    setIsEmptyValues(values === '');
+    if (!labels || !values) {
+      return null;
+    }
     setTypeChart(event.target.value);
   };
 
@@ -17,23 +34,31 @@ const Statistics = () => {
         <label className='statistics__label'>
           X axis labels:
           <input
-            placeholder='Enter: Label1, Label2, Label3'
-            onChange={(event) => setLabels(event.target.value)}
+            placeholder='Label1, Label2, Label3'
+            onChange={onChangeLabels}
             type='text'
+            name='labels'
             value={labels}
             required
           />
+          {isEmptyLabels && (
+            <span className='statistics__required'>Enter labels for chart</span>
+          )}
         </label>
 
         <label className='statistics__label'>
           Y axis values:
           <input
-            placeholder='Enter: Value1, Value2, Value3'
-            onChange={(event) => setValues(event.target.value)}
+            placeholder='Value1, Value2, Value3'
+            onChange={onChangeValues}
             type='text'
+            name='values'
             value={values}
             required
           />
+          {isEmptyValues && (
+            <span className='statistics__required'>Enter values for chart</span>
+          )}
         </label>
       </div>
 

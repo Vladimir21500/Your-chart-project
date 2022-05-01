@@ -27,10 +27,6 @@
         border: 2px solid $borderColorBlue;
       }
 
-      &:invalid {
-        border: 2px solid $borderColorRed;
-      }
-
       @include for-small-up {
         width: 60%;
       }
@@ -38,6 +34,12 @@
         width: 50%;
       }
     }
+  }
+
+  &__required {
+    font-size: 16px;
+    font-weight: 400;
+    color: $borderColorRed;
   }
 
   &__chart {
