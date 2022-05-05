@@ -1,5 +1,5 @@
-@import '../../../styles/breakpoints.scss';
-@import '../../../styles/variables.scss';
+@import '../../styles/breakpoints.scss';
+@import '../../styles/variables.scss';
 
 .statistics {
   &__chart-data {
@@ -43,11 +43,15 @@
   }
 
   &__chart {
+    flex-shrink: 1;
     display: flex;
+    flex-shrink: 1;
+    flex-grow: 1;
     align-items: center;
     justify-content: center;
     width: 95%;
     margin: auto;
+    overflow-y: scroll;
 
     @include for-small-up {
       width: 90%;
@@ -72,6 +76,7 @@
 
       & label {
         margin: 10px;
+        max-height: 120px;
         padding: 2px 9px;
         line-height: 60px;
         text-align: center;
